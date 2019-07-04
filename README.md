@@ -1,6 +1,8 @@
 # SEIRD-compartmental-agent-based-model
-This code written in Python2 simulate an SEIRD (Susceptible-Exposed-Infected-Recovered or Dead) model 
-with immunization process on a Scale Free network, built with the Barabási-Albert model with nodes as agents.
+This code written in Python2 simulate an SEIRD (Susceptible-Exposed-Infected-Recovered or Dead) epidemic model 
+with immunization process on a Scale Free network.
+
+The network is built with the Barabási-Albert model and nodes are set as agents.
 
 Varying the parameters of the model different epidemic scenarios can be explored and the effect of a random immunization 
 process can be tested.
