@@ -46,7 +46,10 @@ def set_graph(gt,initial_infected,network_size):
     pos = []
     color_map = []
     for i in range(network_size):
-        color_map.append('blue') 
+        if i in infected_nodes:
+            color_map.append('red') 
+        else:
+            color_map.append('blue')
     for i in range(1000):
         pos.append((random.randrange(0, 1000), random.randrange(0, 1000)))
     return(seed, susceptible_nodes, infected_nodes, exposed_nodes, hr_nodes, hd_nodes, recovered_nodes, d_nodes, imm_nodes, pos, color_map)
@@ -222,6 +225,9 @@ def run_simulation(G_dyn, t, edgelist,infected_nodes, susceptible_nodes, hr_node
         
         for i in recovered_nodes:
             color_map[i] = 'yellow'
+        
+        for i in infected_nodes:
+            color_map[i] = 'red'
         
         for i in d_nodes:
             color_map[i] = 'black'
