@@ -63,7 +63,7 @@ def dynamic_graph(edgelist,gt,beta,mu,ex,mu_r,mu_d,d,fimm,infected_nodes):
     import random
     G_dyn=nx.Graph()
     G_dyn.agent = {} 
-    G_dyn.add_edges_from(edgelist[0][0]) #inizializzo la rete dinamica con la prima configurazione
+    G_dyn.add_edges_from(edgelist[0][0])
     G_dyn.add_nodes_from(list(gt[0].nodes()))
     for i in G_dyn.nodes():
         G_dyn.agent[i]=people(beta,mu,ex,mu_r,mu_d,d,fimm)
